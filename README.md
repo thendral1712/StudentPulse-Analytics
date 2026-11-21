@@ -9,7 +9,7 @@ This project analyses 2,000 student records to understand how daily habits (stud
 
 ## Key Findings
 - **Study time is the dominant factor.** Study hours correlate strongly with GPA (r = 0.73). A regression using daily lifestyle hours explains about 55% of GPA variation on unseen data, almost all of it through study hours.
-- **Stress mostly reflects study time.** High-stress students have the highest GPA (3.26 vs 2.82 for low stress) but also study far more (8.4 vs 5.5 hours per day). Within similar study-hour bands, GPA barely changes with stress.
+- **Stress tracks study and sleep time.** The dataset documentation states that stress level is derived from study and sleep hours, so the pattern is built in: high-stress students study the most (8.4 vs 5.5 hours) and have the highest GPA (3.26 vs 2.82). Within similar study-hour bands, GPA barely changes with stress.
 - **Four lifestyle profiles** were identified with K-Means. GPA differs significantly across them (ANOVA p < 0.001, eta-squared = 0.25), led by "Focused Achievers" (average GPA 3.30).
 - **Time is a trade-off.** Every student's day sums to exactly 24 hours, which shapes the correlations between variables.
 
@@ -28,10 +28,10 @@ This project analyses 2,000 student records to understand how daily habits (stud
 6. Linear regression to predict GPA
 
 ## Limitations
-The data appears constructed: every record's lifestyle hours sum to exactly 24.0 and stress is almost fully tied to study time. Results demonstrate the analytical method and are not evidence about real student populations. All findings are associations, not causes. Clusters overlap (silhouette about 0.22).
+The dataset's own description says stress level is derived from study and sleep hours, and every record's lifestyle hours sum to exactly 24.0, so the data appears constructed. Stress is therefore not an independent measurement, and results demonstrate the analytical method rather than evidence about real students. All findings are associations, not causes. Clusters overlap (silhouette about 0.22).
 
 ## Data Source
-[Dataset title] by [author name], from Kaggle: [Kaggle link]. Licence: [licence].
+**student lifestyle dataset** ("Daily Lifestyle and Academic Performance of Students") by Sumit Kumar, from Kaggle: https://www.kaggle.com/datasets/steve1215rogg/student-lifestyle-dataset. Licensed under the Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
 
 ## How to Run
 1. Download or clone this repository
